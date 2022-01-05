@@ -1,11 +1,10 @@
 import pytest
 import requests
-from lib.base_case import BaseCase
 from lib.assertions import Assertions
+from lib.base_case import BaseCase
 
 
 class TestUserAuth(BaseCase):
-
     exclude_params = [
         "no_cookies",
         "no_token"
@@ -47,8 +46,8 @@ class TestUserAuth(BaseCase):
                                     cookies={'auth_sid': self.auth_sid}
                                     )
         Assertions.assert_json_value_by_name(
-                response,
-                "user_id",
-                0,
-                f"User is authorized with condition {condition}"
-            )
+            response,
+            "user_id",
+            0,
+            f"User is authorized with condition {condition}"
+        )

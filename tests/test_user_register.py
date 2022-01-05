@@ -1,7 +1,7 @@
-import requests
-from lib.base_case import BaseCase
-from lib.assertions import Assertions
 from datetime import datetime
+import requests
+from lib.assertions import Assertions
+from lib.base_case import BaseCase
 
 
 class TestUserRegister(BaseCase):
